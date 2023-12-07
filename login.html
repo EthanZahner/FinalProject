@@ -1,0 +1,289 @@
+<!--This page is for users to login and create their account, I lack the required skills to make a php page to show the users entered information,
+So I had to improvise and use the php file provided in the pacific trails case study-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Ethan's Everything Restaurant|Login</title>
+		<link rel="stylesheet" href="print.css" media="print">
+		<!--This is embedded CSS as requested to make sure the page looks correct-->
+		<style>
+			/*Everything from the body{} to the footer{} is copied from final.css to make sure the page looks uniform*/
+			body {
+				margin: 0;
+				font-family: 'Arial', sans-serif;
+				background-color: #F2F0D5; 
+			}
+
+			.wrapper {
+				max-width: 1200px; 
+				margin: 0 auto; 
+				padding: 0 20px;
+				box-sizing: border-box;
+			}
+
+			header {
+				background-color: #40301D; 
+				color: #F2D091; 
+				text-align: center;
+				padding: 10px 0;
+				font-size: xx-large;
+				font-family: Lucida Handwriting;
+			}
+
+			nav ul {
+				list-style-type: none;
+				padding: 0;
+			}
+
+			nav ul li {
+				display: inline;
+				margin: 0 10px;
+			}
+
+			nav ul li a {
+				color: #F2D091;
+				text-decoration: none;
+			}
+			#navbar {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 10px 20px;
+				background-color: #D9AE79; 
+			}
+
+			#navbar div {
+				display: flex;
+				align-items: center;
+			}
+
+			#navbar #logo img {
+				height: 100px;
+				width: 100px; 
+			}
+
+			#navbar #nav-links a,
+			#navbar #nav-side a {
+				text-decoration: none;
+				color: #40301D;
+				margin: 0 10px;
+				text-transform: uppercase;
+				font-size: x-large;
+				font-family: Lucida Handwriting;
+			}
+
+			#navbar #nav-side a {
+				margin: 0 5px;
+			}
+
+			#navbar #nav-side img {
+				height: 100px;
+				width: 100px;
+			}
+
+			#navbar a:hover {
+				color: #592202; 
+			}
+
+			@media (max-width: 768px) {
+				#navbar {
+					flex-direction: column;
+				}
+				#nav-links {
+					margin-bottom: 10px;
+				}
+			}
+
+			footer {
+				background-color: #40301D; 
+				color: #F2D091; 
+				text-align: center;
+				padding: 10px 0;
+			}
+			/*main feature is establishing a box shadow and getting the padding correct*/
+			#account-creation {
+				background-color: #F2F0D5;
+				padding: 2%;
+				margin: 2% 0;
+				border-radius: 5px;
+				box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			}           
+			/*these 3 below are just basic CSS to make everything look pretty*/
+			#account-creation h2 {
+				color: #40301D;
+				font-family: 'Lucida Handwriting', sans-serif;
+			}
+
+			#account-creation form {
+				display: flex;
+				flex-direction: column;
+			}
+
+			#account-creation label {
+				margin-top: 10px;
+				color: #40301D;
+				font-weight: bold;
+			}
+			/*standardize the inputs for text*/
+			#account-creation input[type=text],
+			#account-creation input[type=email],
+			#account-creation input[type=password],
+			#account-creation textarea {
+				width: 100%;
+				padding: 10px;
+				margin-top: 5px;
+				border: 1px solid #D9AE79;
+				border-radius: 3px;
+			}
+			/*Make the submit button stand out so that the user knows exactly how it should operate*/
+			#account-creation input[type=submit] {
+				width: auto;
+				padding: 10px 20px;
+				margin-top: 20px;
+				background-color: #40301D;
+				color: #F2D091;
+				border: none;
+				border-radius: 3px;
+				cursor: pointer;
+				font-size: large;
+				font-family: 'Lucida Handwriting', sans-serif;
+			}
+
+			#account-creation input[type=submit]:hover {
+			background-color: #592202;
+			}
+
+			#account-creation textarea {
+				height: 100px;
+			}
+			/*The final below code is designed to make the radio buttons and checkbox look aligned and correct with the rest of the page*/
+			.radio-group {
+				display: flex;
+				flex-direction: column;
+				margin-top: 5px;
+			}
+
+			.radio-row {
+				display: flex;
+				align-items: center;
+				margin-bottom: 5px;
+			}
+
+			.radio-row label {
+				margin-left: 10px;
+			}
+
+			.checkbox-group {
+				display: flex;
+				align-items: center;
+				margin-top: 10px;
+			}
+
+			.checkbox-group label {
+				margin-left: 10px;
+			}
+
+			@media (max-width: 768px) {
+			}
+		</style>
+	</head>
+	<body>
+		<!-- wrapper to keep everything from touching the sides of the webpage -->
+        <div class="wrapper"> 
+            <!--navbar with links to each page, also includes a logo, phone number, and checkout cart (note checkout cart cannot be fully implemented with only HTML and CSS)-->
+            <nav id="navbar">
+				<div id="logo">
+					<a href="final.html"><img src="Resturant-Logo.jpg" alt="Ethan's Everything Restaurant Logo"></a>
+				</div>
+				<div id="nav-links">
+					<a href="final.html">HOME</a>
+					<a href="menu.html">MENU</a>
+					<a href="catering.html">CATERING</a>
+					<a href="about us.html">ABOUT US</a>
+				</div>
+				<div id="nav-side">
+					<a href="tel:+1234567890"> (123) 456-7890</a>
+					<a href="login.html">ACCOUNT</a>
+					<a href="checkout.html"><img src="shopping-cart.jpg" alt="Shopping Cart"></a>
+				</div>
+			</nav>
+			<header>
+				<h1>Ethan's Everything Restaurant: Login</h1>
+				<script>
+					function onFormSubmit(event) {
+						event.preventDefault(); //prevents the default form submission behavior
+			
+						//display an alert to the user
+						alert('Your account has been created!');
+			
+						//redirect to the menu page
+						window.location.href = 'menu.html';
+					}
+				</script>
+			</header>
+			<!--Thsi is the form customers can use to create an account with us. Like mentioned at the top of the page, I had to use the php
+			file for the pacific trails case study because I was unsure how to create my own, it also did not involve the code we learned over the ocurse
+			of the semester-->
+			<section id="account-creation">
+				<h2>Create Your Account</h2>
+				<form action="menu.html" method="post" onsubmit="onFormSubmit(event)">
+					<!--text boxes-->
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required><br>
+
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required><br>
+
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" required><br>
+
+					<label for="bio">Bio:</label>
+					<textarea id="bio" name="bio"></textarea><br>
+
+					<label>Favorite Cuisine:</label>
+					<!--radio buttons-->
+					<div class="radio-group">
+						<div class="radio-row">
+							<input type="radio" id="american" name="cuisine" value="american">
+							<label for="american">American</label>
+						</div>
+						<div class="radio-row">
+							<input type="radio" id="asian" name="cuisine" value="asian">
+							<label for="asian">Asian</label>
+						</div>
+						<div class="radio-row">
+								<input type="radio" id="italian" name="cuisine" value="italian">
+								<label for="italian">Italian</label>
+							</div>
+						<div class="radio-row">
+								<input type="radio" id="mexican" name="cuisine" value="mexican">
+								<label for="mexican">Mexican</label>
+							</div>
+						<div class="radio-row">
+							<input type="radio" id="indian" name="cuisine" value="indian">
+							<label for="indian">Indian</label>
+						</div>
+						<div class="radio-row">
+							<input type="radio" id="hawaiian" name="cuisine" value="hawaiian">
+							<label for="hawaiian">Hawaiian</label>
+						</div>
+					</div>
+					<!--checkbox-->
+					<div class="checkbox-group">
+						<input type="checkbox" id="newsletter" name="newsletter" value="yes">
+						<label for="newsletter">Subscribe to newsletter?</label>
+					</div>
+
+					<input type="submit" value="Create Account">
+				</form type="submit" value="Create Account">
+			</section>
+			<!--Appears on every page-->
+			<footer>
+				<p>Contact us: 123-456-7890 or at</p>
+				<p><a href="mailto:eezahner2@mail.fhsu.edu">eezahner2@mail.fhsu.edu</a></p>
+			</footer>
+		</div>
+	</body>
+</html>

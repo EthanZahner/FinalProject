@@ -1,0 +1,172 @@
+<!--This page is where the customer can find the menu for the resturant. It is displayed in a grid fashion and each one will ahve a title
+3 options with their prices displayed to the right-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="print.css" media="print">
+        <link rel="stylesheet" href="final.css">
+        <title>Ethan's Everything Restaurant|Menu</title>
+    </head>
+    <body>
+        <!-- wrapper to keep everything from touching the sides of the webpage -->
+        <div class="wrapper"> 
+            <!--navbar with links to each page, also includes a logo, phone number, and checkout cart (note checkout cart cannot be fully implemented with only HTML and CSS)-->
+            <nav id="navbar">
+            
+                <div id="logo">
+                    <a href="final.html"><img src="Resturant-Logo.jpg" alt="Ethan's Everything Restaurant Logo"></a>
+                </div>
+                <div id="nav-links">
+                    <a href="final.html">HOME</a>
+                    <a href="menu.html">MENU</a>
+                    <a href="catering.html">CATERING</a>
+                    <a href="about us.html">ABOUT US</a>
+                </div>
+                <div id="nav-side">
+                    <a href="tel:+1234567890"> (123) 456-7890</a>
+                    <a href="login.html">ACCOUNT</a>
+                    <a href="checkout.html"><img src="shopping-cart.jpg" alt="Shopping Cart"></a>
+                </div>
+            </nav>
+            <header>
+                <h1>Ethan's Everything Restaurant: Menu</h1>
+            </header>
+            <main>
+                <img src="aroundtheworld.jpg" alt="Foods from around the world" class="responsive">
+                <p style="font-size: 2em; font-family: Lucida Handwriting;text-align: center;">Welcome to the menu page! Here you can find an array of delicacies from around the world! Once you make your decide what you want to order, <a href="login.html">login here</a> so we can get your information, and then give us a call!</p>
+            </main>
+            <!--Search container for finding dishes-->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for a dish" oninput="searchDishes()">
+            </div>
+            <!--Each food category class contains 3 items each and is in an unordered list-->
+            <section id="food-categories">
+                <!-- Appetizers -->
+                <div class="food-category">
+                    <h3>Appetizers</h3>
+                    <ul>
+                        <li id="spring-rolls" data-price="5.99">Spring Rolls - $5.99 -- <small><i>(Cabbage, carrots, mushrooms) [Vegan, Gluten-Free option available]</i></small><button onclick="addToCart('Spring Rolls', 5.99)">Add to Cart</button></li>
+                        <li id="bruschetta" data-price="6.49">Bruschetta - $6.49 -- <small><i>(Tomatoes, garlic, basil, olive oil, baguette) [Vegan]</i></small><button onclick="addToCart('Bruschetta', 6.49)">Add to Cart</button></li>
+                        <li id="garlic-bread" data-price="4.99">Garlic Bread - $4.99 -- <small><i>(French bread, garlic, butter) [Gluten-Free option available]</i></small><button onclick="addToCart('Garlic Bread', 4.99)">Add to Cart</button></li>
+                        <li id="mozzarella-sticks" data-price="7.99">Mozzarella Sticks - $7.99 -- <small><i>(Mozzarella cheese, breadcrumbs, marinara sauce)</i></small><button onclick="addToCart('Mozzarella Sticks', 7.99)">Add to Cart</button></li>
+                        <li id="spinach-artichoke-dip" data-price="8.50">Spinach Artichoke Dip - $8.50 -- <small><i>(Spinach, artichokes, cream cheese) [Vegan]</i></small><button onclick="addToCart('Spinach Artichoke Dip', 8.50)">Add to Cart</button></li>
+                        <li id="shrimp-cocktail" data-price="9.99">Shrimp Cocktail - $9.99 -- <small><i>(Shrimp, cocktail sauce) [Gluten-Free]</i></small><button onclick="addToCart('Shrimp Cocktail', 9.99)">Add to Cart</button></li>
+                    </ul>
+                </div>
+            
+                <!-- Beverages -->
+                <div class="food-category">
+                    <h3>Beverages</h3>
+                    <ul>
+                        <li id="lemonade" data-price="3.50">Lemonade - $3.50 -- <small><i>[Vegan, Gluten-Free]</i></small><button onclick="addToCart('Lemonade', 3.50)">Add to Cart</button></li>
+                        <li id="coffee" data-price="2.99">Coffee - $2.99 -- <small><i>(Coffee grounds, water) [Vegan option available, Gluten-Free]</i></small><button onclick="addToCart('Coffee', 2.99)">Add to Cart</button></li>
+                        <li id="green-tea" data-price="3.25">Green Tea - $3.25 -- <small><i>(Green tea leaves) [Vegan, Gluten-Free]</i></small><button onclick="addToCart('Green Tea', 3.25)">Add to Cart</button></li>
+                        <li id="soda" data-price="1.99">Soda - $1.99 -- <small><i>(Assorted soft drinks)</i></small><button onclick="addToCart('Soda', 1.99)">Add to Cart</button></li>
+                        <li id="hot-chocolate" data-price="4.00">Hot Chocolate - $4.00 -- <small><i>(Cocoa, milk, whipped cream)</i></small><button onclick="addToCart('Hot Chocolate', 4.00)">Add to Cart</button></li>
+                        <li id="fruit-smoothie" data-price="5.50">Fruit Smoothie - $5.50 -- <small><i>(Assorted fruits, yogurt) [Vegan]</i></small><button onclick="addToCart('Fruit Smoothie', 5.50)">Add to Cart</button></li>
+                    </ul>
+                </div>
+            
+                <!-- Desserts -->
+                <div class="food-category">
+                    <h3>Desserts</h3>
+                    <ul>
+                        <li id="cheesecake" data-price="5.00">Cheesecake - $5.00 -- <small><i>(Cream cheese, sugar, eggs, crust) [Gluten-Free option available]</i></small><button onclick="addToCart('Cheesecake', 5.00)">Add to Cart</button></li>
+                        <li id="chocolate-cake" data-price="4.75">Chocolate Cake - $4.75 -- <small><i>(Flour, cocoa, sugar, eggs) [Gluten-Free option available]</i></small><button onclick="addToCart('Chocolate Cake', 4.75)">Add to Cart</button></li>
+                        <li id="fruit-salad" data-price="4.50">Fruit Salad - $4.50 -- <small><i>(Assorted fruits) [Vegan, Gluten-Free]</i></small><button onclick="addToCart('Fruit Salad', 4.50)">Add to Cart</button></li>
+                        <li id="apple-pie" data-price="6.99">Apple Pie - $6.99 -- <small><i>(Apples, sugar, cinnamon, pie crust)</i></small><button onclick="addToCart('Apple Pie', 6.99)">Add to Cart</button></li>
+                        <li id="tiramisu" data-price="7.50">Tiramisu - $7.50 -- <small><i>(Ladyfingers, coffee, mascarpone) [Vegetarian]</i></small><button onclick="addToCart('Tiramisu', 7.50)">Add to Cart</button></li>
+                        <li id="ice-cream-sundae" data-price="5.25">Ice Cream Sundae - $5.25 -- <small><i>(Ice cream, chocolate syrup, nuts, whipped cream) [Vegetarian]</i></small><button onclick="addToCart('Ice Cream Sundae', 5.25)">Add to Cart</button></li>
+                    </ul>
+                </div>
+            
+                <!-- American Food -->
+                <div class="food-category">
+                    <h3>American Food</h3>
+                    <ul>
+                        <li id="cheeseburger" data-price="8.99">Cheeseburger - $8.99 -- <small><i>(Beef patty, cheese, lettuce, tomato, bun) [Gluten-Free option available]</i></small><button onclick="addToCart('Cheeseburger', 8.99)">Add to Cart</button></li>
+                        <li id="fried-chicken" data-price="7.50">Fried Chicken - $7.50 -- <small><i>(Chicken, flour, spices) [Gluten-Free option available]</i></small><button onclick="addToCart('Fried Chicken', 7.50)">Add to Cart</button></li>
+                        <li id="bbq-ribs" data-price="12.99">BBQ Ribs - $12.99 -- <small><i>(Pork ribs, BBQ sauce) [Gluten-Free option available]</i></small><button onclick="addToCart('BBQ Ribs', 12.99)">Add to Cart</button></li>
+                        <li id="loaded-fries" data-price="6.99">Loaded Fries - $6.99 -- <small><i>(French fries, cheese, bacon, sour cream)</i></small><button onclick="addToCart('Loaded Fries', 6.99)">Add to Cart</button></li>
+                        <li id="buffalo-wings" data-price="9.25">Buffalo Wings - $9.25 -- <small><i>(Chicken wings, buffalo sauce, celery, ranch dressing)</i></small><button onclick="addToCart('Buffalo Wings', 9.25)">Add to Cart</button></li>
+                        <li id="grilled-cheese-sandwich" data-price="5.99">Grilled Cheese Sandwich - $5.99 -- <small><i>(Cheese, bread) [Vegetarian]</i></small><button onclick="addToCart('Grilled Cheese Sandwich', 5.99)">Add to Cart</button></li>
+                    </ul>
+                </div>
+            
+                <!-- Asian Food -->
+                <div class="food-category">
+                    <h3>Asian Food</h3>
+                    <ul>
+                        <li id="sushi-rolls" data-price="10.00">Sushi Rolls - $10.00 -- <small><i>(Rice, fish, seaweed, vegetables) [Gluten-Free option available]</i></small><button onclick="addToCart('Sushi Rolls', 10.00)">Add to Cart</button></li>
+                        <li id="pad-thai" data-price="9.50">Pad Thai - $9.50 -- <small><i>(Rice noodles, chicken/shrimp, peanuts, vegetables) [Gluten-Free option available]</i></small><button onclick="addToCart('Pad Thai', 9.50)">Add to Cart</button></li>
+                        <li id="general-tsos-chicken" data-price="8.75">General Tso's Chicken - $8.75 -- <small><i>(Chicken, sauce, broccoli) [Gluten-Free option available]</i></small><button onclick="addToCart('General Tsos Chicken', 8.75)">Add to Cart</button></li>
+                        <li id="miso-soup" data-price="4.25">Miso Soup - $4.25 -- <small><i>(Soybean paste, tofu, seaweed)</i></small><button onclick="addToCart('Miso Soup', 4.25)">Add to Cart</button></li>
+                        <li id="beef-and-broccoli" data-price="11.25">Beef and Broccoli - $11.25 -- <small><i>(Beef, broccoli, soy sauce)</i></small><button onclick="addToCart('Beef and Broccoli', 11.25)">Add to Cart</button></li>
+                        <li id="spring-onion-pancakes" data-price="6.99">Spring Onion Pancakes - $6.99 -- <small><i>(Flour, spring onions) [Vegetarian]</i></small><button onclick="addToCart('Spring Onion Pancakes', 6.99)">Add to Cart</button></li>
+                    </ul>
+                </div>
+            
+                <!-- Italian Food -->
+                <div class="food-category">
+                    <h3>Italian Food</h3>
+                    <ul>
+                        <li id="spaghetti-carbonara" data-price="11.99">Spaghetti Carbonara - $11.99 -- <small><i>(Spaghetti, eggs, cheese, bacon) [Gluten-Free option available]</i></small><button onclick="addToCart('Spaghetti Carbonara', 11.99)">Add to Cart</button></li>
+                        <li id="margherita-pizza" data-price="9.99">Margherita Pizza - $9.99 -- <small><i>(Dough, tomatoes, mozzarella, basil) [Gluten-Free option available]</i></small><button onclick="addToCart('Margherita Pizza', 9.99)">Add to Cart</button></li>
+                        <li id="lasagna" data-price="12.50">Lasagna - $12.50 -- <small><i>(Pasta, meat sauce, cheese) [Gluten-Free option available]</i></small><button onclick="addToCart('Lasagna', 12.50)">Add to Cart</button></li>
+                        <li id="chicken-alfredo" data-price="10.75">Chicken Alfredo - $10.75 -- <small><i>(Chicken, fettuccine, Alfredo sauce)</i></small><button onclick="addToCart('Chicken Alfredo', 10.75)">Add to Cart</button></li>
+                        <li id="eggplant-parmesan" data-price="8.99">Eggplant Parmesan - $8.99 -- <small><i>(Eggplant, marinara sauce, mozzarella) [Vegetarian]</i></small><button onclick="addToCart('Eggplant Parmesan', 8.99)">Add to Cart</button></li>
+                        <li id="tiramisu-italian" data-price="7.50">Tiramisu - $7.50 -- <small><i>(Ladyfingers, coffee, mascarpone) [Vegetarian]</i></small><button onclick="addToCart('Tiramisu', 7.50)">Add to Cart</button></li>
+                    </ul>
+                </div>
+            
+                <!-- Mexican Food -->
+                <div class="food-category">
+                    <h3>Mexican Food</h3>
+                    <ul>
+                        <li id="tacos" data-price="7.99">Tacos - $7.99 -- <small><i>(Tortillas, meat/beans, cheese, lettuce, salsa) [Vegan, Gluten-Free option available]</i></small><button onclick="addToCart('Tacos', 7.99)">Add to Cart</button></li>
+                        <li id="burritos" data-price="8.99">Burritos - $8.99 -- <small><i>(Tortilla, rice, beans, meat, cheese) [Vegan, Gluten-Free option available]</i></small><button onclick="addToCart('Burritos', 8.99)">Add to Cart</button></li>
+                        <li id="enchiladas" data-price="9.99">Enchiladas - $9.99 -- <small><i>(Tortillas, meat, cheese, sauce) [Gluten-Free option available]</i></small><button onclick="addToCart('Enchiladas', 9.99)">Add to Cart</button></li>
+                        <li id="guacamole-and-chips" data-price="5.50">Guacamole and Chips - $5.50 -- <small><i>(Avocado, tomatoes, onions, lime) [Vegan]</i></small><button onclick="addToCart('Guacamole and Chips', 5.50)">Add to Cart</button></li>
+                        <li id="chiles-rellenos" data-price="10.25">Chiles Rellenos - $10.25 -- <small><i>(Poblano peppers, cheese, sauce) [Vegetarian]</i></small><button onclick="addToCart('Chiles Rellenos', 10.25)">Add to Cart</button></li>
+                        <li id="mexican-street-corn" data-price="4.99">Mexican Street Corn (Elote) - $4.99 -- <small><i>(Corn, mayonnaise, cheese, chili powder) [Vegetarian]</i></small><button onclick="addToCart('Mexican Street Corn', 4.99)">Add to Cart</button></li>
+                    </ul>
+                </div>
+            
+                <!-- Indian Food -->
+                <div class="food-category">
+                    <h3>Indian Food</h3>
+                    <ul>
+                        <li id="butter-chicken" data-price="10.99">Butter Chicken - $10.99 -- <small><i>(Chicken, butter, cream, spices) [Gluten-Free option available]</i></small><button onclick="addToCart('Butter Chicken', 10.99)">Add to Cart</button></li>
+                        <li id="palak-paneer" data-price="9.99">Palak Paneer - $9.99 -- <small><i>(Spinach, paneer, spices) [Gluten-Free]</i></small><button onclick="addToCart('Palak Paneer', 9.99)">Add to Cart</button></li>
+                        <li id="lamb-biryani" data-price="11.99">Lamb Biryani - $11.99 -- <small><i>(Lamb, rice, spices) [Gluten-Free option available]</i></small><button onclick="addToCart('Lamb Biryani', 11.99)">Add to Cart</button></li>
+                        <li id="mango-lassi" data-price="4.50">Mango Lassi - $4.50 -- <small><i>(Yogurt, mango, sugar) [Vegan]</i></small><button onclick="addToCart('Mango Lassi', 4.50)">Add to Cart</button></li>
+                        <li id="samosas" data-price="6.75">Samosas - $6.75 -- <small><i>(Potatoes, peas, spices) [Vegan]</i></small><button onclick="addToCart('Samosas', 6.75)">Add to Cart</button></li>
+                        <li id="chicken-tikka-masala" data-price="12.50">Chicken Tikka Masala - $12.50 -- <small><i>(Chicken, tomatoes, spices) [Gluten-Free]</i></small><button onclick="addToCart('Chicken Tikka Masala', 12.50)">Add to Cart</button></li>
+                    </ul>
+                </div>
+                <!-- Hawaiian Food -->
+                <div class="food-category">
+                    <h3>Hawaiian Food</h3>
+                    <ul>
+                        <li id="poke-bowl" data-price="10.50">Poke Bowl - $10.50 -- <small><i>(Rice, raw fish, vegetables, sauce) [Gluten-Free option available]</i></small><button onclick="addToCart('Poke Bowl', 10.50)">Add to Cart</button></li>
+                        <li id="lomi-lomi-salmon" data-price="9.99">Lomi-Lomi Salmon - $9.99 -- <small><i>(Salmon, tomatoes, onion, scallions) [Gluten-Free]</i></small><button onclick="addToCart('Lomi-Lomi Salmon', 9.99)">Add to Cart</button></li>
+                        <li id="kalua-pig" data-price="12.00">Kalua Pig - $12.00 -- <small><i>(Pork, Hawaiian sea salt) [Gluten-Free]</i></small><button onclick="addToCart('Kalua Pig', 12.00)">Add to Cart</button></li>
+                        <li id="haupia" data-price="5.25">Haupia - $5.25 -- <small><i>(Coconut milk pudding) [Vegan, Gluten-Free]</i></small><button onclick="addToCart('Haupia', 5.25)">Add to Cart</button></li>
+                        <li id="loco-moco" data-price="11.75">Loco Moco - $11.75 -- <small><i>(Rice, hamburger patty, egg, brown gravy)</i></small><button onclick="addToCart('Loco Moco', 11.75)">Add to Cart</button></li>
+                        <li id="macadamia-nut-pie" data-price="7.99">Macadamia Nut Pie - $7.99 -- <small><i>(Macadamia nuts, pie crust, caramel) [Vegetarian]</i></small><button onclick="addToCart('Macadamia Nut Pie', 7.99)">Add to Cart</button></li>
+                    </ul>
+                </div>
+
+            </section>
+            
+            <!--appears on every page-->
+            <footer>
+                <p>Contact us: 123-456-7890 or at</p>
+                <p><a href="mailto:eezahner2@mail.fhsu.edu">eezahner2@mail.fhsu.edu</a></p>
+            </footer>
+        </div>
+        <script src="Javascript.js"></script>
+    </body>
+</html>

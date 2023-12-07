@@ -1,0 +1,353 @@
+/*The main CSS for every HTML page besides login.html*/
+/*the body and header CSS just make things look clean, theres nothing really special about them*/
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F2F0D5; 
+}
+/*the wrapper ensures that the page won't touch the borders of the webpage, helps make everything look more well organized as well*/
+.wrapper {
+    max-width: 80%; 
+    margin: 0 auto; 
+    padding: 0 1.25%;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #40301D; 
+    color: #F2D091; 
+    text-align: center;
+    padding: 10px 0;
+    font-size: xx-large;
+    font-family: Lucida Handwriting;
+}
+/*used to make certain images responsive when the webpage changes size*/
+.responsive {
+    width: 100%;
+    height: 100%;
+  }
+/*the following nav CSS relate to the nav bar to standardize it across of each page*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #F2D091;
+    text-decoration: none;
+}
+/*controls the spacing in the nav bar*/
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% ;
+    background-color: #D9AE79; 
+}
+
+#navbar div {
+    display: flex;
+    align-items: center;
+}
+
+#navbar #logo img {
+    height: 100px;
+    width: 100px; 
+}
+/*controls the designs of the text and links*/
+#navbar #nav-links a,
+#navbar #nav-side a {
+    text-decoration: none;
+    color: #40301D;
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-size: x-large;
+    font-family: Lucida Handwriting;
+}
+
+#navbar #nav-side a {
+    margin: 0 5px;
+}
+
+#navbar #nav-side img {
+    height: 100px;
+    width: 100px;
+}
+
+
+#navbar a:hover {
+    color: #592202; 
+}
+/*ensures a responsive design to different devices*/
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+    }
+    #nav-links {
+        margin-bottom: 10px;
+    }
+}
+/*main image on final, menu, catering, and about us pages*/
+main img {
+    width: 100%;
+    height: 100%; 
+}
+/*footer*/
+footer {
+    background-color: #40301D; 
+    color: #F2D091; 
+    text-align: center;
+    padding: 10px 0;
+}
+/*The following "menu" class CSS controls the main elements of the final.html page, displays the features of our menu*/
+#menu-highlights {
+    text-align: center;
+}
+/*the below CSS controls the box, the text, and finally the iamge*/
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-category h3 {
+    color: #592202; 
+    font-family: Lucida Handwriting;
+}
+
+.menu-category {
+    margin: 1%;
+    flex: 0 1 calc(33.333% - 4%); 
+    box-sizing: border-box;
+}
+
+.menu-category a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-category img {
+    width: 100%; 
+    height: 60%; 
+    display: block;
+}
+
+/*makes it responsive for different devices*/
+@media (max-width: 768px) {
+    .menu-category {
+        flex: 0 1 calc(50% - 40px);
+    }
+}
+/* The following food categories control how the different food options are dispayed on the menu.html page*/
+#food-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+/*Much of the code is shared from the menu-category above due to how similar the displays are aka rows of 3, boxes, 9 total boxes. The only real change
+is instead of an image and a link for the content, this controls the text within each box*/
+.food-category {
+    flex: 0 1 calc(33.333% - 2%);
+    margin: 10px;
+    box-sizing: border-box;
+    border: 6px solid #40301D;
+    padding: 1.5%;
+    background-color: #F2D091;
+}
+
+.food-category h3 {
+    text-align: center;
+    color: #592202; 
+    font-family: Lucida Handwriting;
+}
+/*makes sure the lists look nice and uniform*/
+.food-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.food-category ul li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+/*makes sure it works with different devices*/
+@media (max-width: 768px) {
+    .food-category {
+        flex: 0 1 calc(50% - 20px);
+    }
+}
+/*CSS for the search box, even though the required code for it to actually work is lacking, I still wanted to make sure it looked good with the rest
+of the page*/
+.search-container {
+    text-align: center;
+    margin: 2%;
+}
+
+#searchInput {
+    padding: 10px;
+    font-size: 1em;
+}
+/*The catering class selectors share code from the above similar classes because the box design works well with my website, and because I've already
+used it in the other pages, I think the uniform look gives the user an easier time navigating the website*/
+#catering-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2% 0;
+}
+
+.catering-category {
+    flex: 0 1 calc(33.333% - 40px);
+    margin: 10px;    
+    box-sizing: border-box;
+    border: 6px solid #40301D;
+    padding: 1.5%;
+    background-color: white;
+}
+/*different colors for each of the 3 packages related to their name. Green for continental, green and blue gradient for hemisphere (half haha),
+and blue for the worldwide package*/
+.continental {
+    background-color: #CCE5C7; 
+}
+
+.hemisphere {
+    background: linear-gradient(to right, #CCE5C7, #92A7C9);
+}
+
+.worldwide {
+    background-color: #92A7C9; 
+}
+
+.catering-category h3 {
+    text-align: center;
+    color: #592202; 
+    font-family: Lucida Handwriting;
+}
+/*Makes sure the lists look nice and uniform*/
+.catering-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.catering-category ul li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+/*ensures the catering categories work in different devices*/
+@media (max-width: 768px) {
+    .catering-category {
+        flex: 0 1 calc(50% - 20px);
+    }
+}
+/*The following catering staff code relates to the table located at the bottom of the about us.html page*/
+#catering-staff {
+    width: 60%;
+    margin: 0% auto;
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin-bottom: 3%;
+}
+/*heading for the body*/
+#catering-staff thead th {
+    background-color: #D9AE79;
+    color: #333;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+
+#catering-staff tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+/*This CSS and the one below it make the background color for the table alternate so that the user has an easier time reading it
+it also shares the color palatte with the rest of the page*/
+#catering-staff tbody tr:nth-child(even) {
+    background-color: #D9AE79;
+}
+
+#catering-staff tbody tr:nth-child(odd) {
+    background-color: #F2D091;
+}
+/* From the here down to the CSS for the cite tag, the goal is to just clean everything up and make it look nice with the rest of the page*/
+#reviews {
+    text-align: center;
+    margin: 5% auto;
+    max-width: 80%;
+}
+
+.review {
+    margin-bottom: 2%;
+}
+
+blockquote {
+    font-size: 1.2em;
+    color: #40301D;
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-style: italic;
+    color: #592202;
+}
+/*the order and payment CSS is listed below, it makes sure the spacing takes up the page, trying to leave out any space for awkward nothing space
+Because it cannot display the actual order that a customer may want, for now there is a place holder in the HTML code*/
+#order-summary, #payment-info {
+    background-color: #F2D091;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+#order-summary h2, #payment-info h2 {
+    color: #40301D;
+    font-family: 'Lucida Handwriting', sans-serif;
+}
+
+.order-item {
+     
+    margin-bottom: 10px;
+}
+
+.order-item span {
+    font-size: 1em;
+}
+
+.order-total {
+    font-size: 1.5em;
+    text-align: right;
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #40301D;
+    font-weight: bold;
+}
+/*Implementation for the submit button to make it algin correctly, as well as have a nice color that matches the page*/
+input[type="text"], input[type="submit"] {
+    width: 98%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #D9AE79;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #40301D;
+    color: #F2D091;
+    cursor: pointer;
+    font-family: 'Lucida Handwriting', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background-color: #592202;
+}

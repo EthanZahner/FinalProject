@@ -1,0 +1,61 @@
+/*print.css is used to reformat the page if someone is wanting to attempt to print it. It makes the colors black and white so that it is
+useable with a black and white printer, and it also simplifies much of the design of the page*/
+@media print {
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+
+    .wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header, footer, nav, #navbar, .search-container, .menu-category img, #navbar #nav-side, #catering-staff, .responsive {
+        display: none;
+    }
+
+    main, main img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #000000; 
+    }
+
+    .menu-category, .food-category, .catering-category {
+        width: 100%;
+        margin: 0;
+        border: none; 
+    }
+
+    .menu-category h3, .food-category h3, .catering-category h3 {
+        font-family: Arial, sans-serif;
+    }
+
+    .menu-items, #food-categories, #catering-categories {
+        display: block;
+    }
+
+    blockquote, cite {
+        font-size: medium; 
+    }
+
+    #order-summary, #payment-info, #reviews, .review {
+        border: 1px solid #000; 
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    #order-summary h2, #payment-info h2, blockquote, cite {
+        font-family: Arial, sans-serif; 
+    }
+
+    label, input[type="text"], input[type="submit"] {
+        display: none; 
+    }
+}

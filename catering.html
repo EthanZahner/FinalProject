@@ -1,0 +1,130 @@
+<!--Here customers can find our catering page where we offer 3 seperate packages with different rates and chocies each, includes a fragment link as well as a table-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="print.css" media="print">
+        <link rel="stylesheet" href="final.css">
+        <title>Ethan's Everything Restaurant|Catering</title>
+    </head>
+    <body>
+        <!-- wrapper to keep everything from touching the sides of the webpage -->
+        <div class="wrapper"> 
+            <!--navbar with links to each page, also includes a logo, phone number, and checkout cart (note checkout cart cannot be fully implemented with only HTML and CSS)-->
+            <nav id="navbar">
+                
+                <div id="logo">
+                    <a href="final.html"><img src="Resturant-Logo.jpg" alt="Ethan's Everything Restaurant Logo"></a>
+                </div>
+                <div id="nav-links">
+                    <a href="final.html">HOME</a>
+                    <a href="menu.html">MENU</a>
+                    <a href="catering.html">CATERING</a>
+                    <a href="about us.html">ABOUT US</a>
+                </div>
+                <div id="nav-side">
+                    <a href="tel:+1234567890"> (123) 456-7890</a>
+                    <a href="login.html">ACCOUNT</a>
+                    <a href="checkout.html"><img src="shopping-cart.jpg" alt="Shopping Cart"></a>
+                </div>
+            </nav>
+            <header>
+                <h1>Ethan's Everything Restaurant: Catering</h1>
+            </header>
+            <main>
+                <img src="caterers.jpg" alt="Restaurant Caterers" class="responsive">
+                <p style="font-size: 2em; font-family: Lucida Handwriting;text-align: center;">Here at Ethan's Everything Resturant, we also provide a catering service! Select one of the options below and we'll come out for any occasion or celebration! Be sure to <a href="#catering-staff">meet the team!</a></p>
+            </main>
+            <!--Contains the various options for catering that we offer, should be displayed in 3 side by side boxes in an unordered list.
+            I also think the names with the color scheme are clever-->
+            <section id="catering-categories">
+                <div class="catering-category continental">
+                    <h3>Continental Package</h3>
+                    <ul>
+                        <li>$50 per guest attending</li>
+                        <li>$50 per hourly rate</li>
+                        <li>Choice of one main food culture</li>
+                        <li>Choice of 2 appetizers</li>
+                        <li>Choice of 3 beverages</li>
+                    </ul>
+                </div>
+                <div class="catering-category hemisphere">
+                    <h3>Hemisphere Package</h3>
+                    <ul>
+                        <li>$120 per guest attending</li>
+                        <li>$100 per hourly rate</li>
+                        <li>Choice of three main food culture</li>
+                        <li>Choice of 3 appetizers</li>
+                        <li>Choice of 5 beverages</li>
+                    </ul>
+                </div>
+                <div class="catering-category worldwide">
+                    <h3>World-Wide Package</h3>
+                    <ul>
+                        <li>$190 per guest attending</li>
+                        <li>$150 per hourly rate</li>
+                        <li>All main food cultures included</li>
+                        <li>Choice of 5 appetizers</li>
+                        <li>All beverages included</li>
+                    </ul>
+                </div>
+            </section>
+            <!--Contains a table ti display the catering staff, the four headers are name, role, favorite dish, and time spent with us-->
+            <p style="font-size: 2em; font-family: Lucida Handwriting;text-align: center;">Meet the catering staff!</p>
+                <table id="catering-staff">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Favorite Dish</th>
+                            <th>Time Working With Us</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Luke Hampl</td>
+                            <td>Head Chef</td>
+                            <td>Butter Chicken</td>
+                            <td>8 years</td>
+                        </tr>
+                        <tr>
+                            <td>Sydney Ryan</td>
+                            <td>Sous Chef</td>
+                            <td>Enchiladas</td>
+                            <td>4 years</td>
+                        </tr>
+                        <tr>
+                            <td>Holden Humble</td>
+                            <td>Line Cook</td>
+                            <td>Beef Bourguignon</td>
+                            <td>11 years</td>
+                        </tr>
+                        <tr>
+                            <td>Henry Hutcheson</td>
+                            <td>Line Cook</td>
+                            <td>Kalua Pig</td>
+                            <td>10 years</td>
+                        </tr>
+                        <tr>
+                            <td>Kale Link</td>
+                            <td>Bus Boy</td>
+                            <td>Lasagna</td>
+                            <td>6 years</td>
+                        </tr>
+                        <tr>
+                            <td>Jackson Sinsel</td>
+                            <td>Bus Boy</td>
+                            <td>BBQ Ribs</td>
+                            <td>3 years</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--Appears on every page-->
+            <footer>
+                <p>Contact us: 123-456-7890 or at</p>
+                <p><a href="mailto:eezahner2@mail.fhsu.edu">eezahner2@mail.fhsu.edu</a></p>
+            </footer>
+        </div>
+    </body>
+</html>

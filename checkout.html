@@ -1,0 +1,83 @@
+<!--This page is where customers can checkout. For the credit card information spot, I don't know how to create php code so I just used the one provided in the pacific trails
+case study as a place holder-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="print.css" media="print">
+        <link rel="stylesheet" href="final.css">
+        <title>Ethan's Everything Resturant|Checkout</title>
+    </head>
+    <body>
+        <!-- wrapper to keep everything from touching the sides of the webpage -->
+        <div class="wrapper"> 
+            <!--navbar with links to each page, also includes a logo, phone number, and checkout cart (note checkout cart cannot be fully implemented with only HTML and CSS)-->
+            <nav id="navbar">
+                
+                <div id="logo">
+                    <a href="final.html"><img src="Resturant-Logo.jpg" alt="Ethan's Everything Restaurant Logo"></a>
+                </div>
+                <div id="nav-links">
+                    <a href="final.html">HOME</a>
+                    <a href="menu.html">MENU</a>
+                    <a href="catering.html">CATERING</a>
+                    <a href="about us.html">ABOUT US</a>
+                </div>
+                <div id="nav-side">
+                    <a href="tel:+1234567890"> (123) 456-7890</a>
+                    <a href="login.html">ACCOUNT</a>
+                    <a href="checkout.html"><img src="shopping-cart.jpg" alt="Shopping Cart"></a>
+                </div>
+            </nav>
+            <header>
+                <h1>Ethan's Everything Restaurant: Checkout</h1>
+                <script>
+					function onFormSubmit(event) {
+						event.preventDefault(); //prevents the default form submission behavior
+			
+						//display an alert to the user
+						alert('Your order has been placed!');
+			
+						//redirect to the menu page
+						window.location.href = 'final.html';
+					}
+				</script>
+            </header>
+            <!--this is where customers will find their order-->
+            <main>
+                <section id="order-summary">
+                    <h2>Your Order</h2>
+                    <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+                </section>
+                <!--A form for gathering the customers payment info, used the pacific trail php file because I was unsure how to implement my own-->
+                <section id="payment-info">
+                    <h2>Payment Information</h2>
+                    <form action="final.html" method="post" onsubmit="onFormSubmit(event)">
+                        <label for="card-name">Name on Card:</label>
+                        <input type="text" id="card-name" name="card-name" required><br>
+
+                        <label for="card-number">Credit Card Number:</label>
+                        <input type="text" id="card-number" name="card-number" required><br>
+
+                        <label for="exp-month">Expiration Month:</label>
+                        <input type="text" id="exp-month" name="exp-month" required><br>
+
+                        <label for="exp-year">Expiration Year:</label>
+                        <input type="text" id="exp-year" name="exp-year" required><br>
+
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" required><br>
+
+                        <input type="submit" value="Complete Purchase">
+                    </form type="submit" value="Create Account">
+                </section>
+            </main>
+            <footer>
+                <p>Contact us: 123-456-7890 or at</p>
+                <p><a href="mailto:eezahner2@mail.fhsu.edu">eezahner2@mail.fhsu.edu</a></p>
+            </footer>
+        </div>
+        <script src="Javascript.js"></script>
+    </body>
+</html>

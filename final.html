@@ -1,0 +1,113 @@
+<!--This page is the first thing our customers will see when finding our website, it contains a basic descriptoin of the resturant as well as 
+various examples of our dishes-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="print.css" media="print">
+		<link rel="stylesheet" href="final.css">
+		<title>Ethan's Everything Restaurant</title>
+	</head>
+	<body>
+		<!-- wrapper to keep everything from touching the sides of the webpage -->
+		<div class="wrapper"> 
+			<!--navbar with links to each page, also includes a logo, phone number, and checkout cart (note checkout cart cannot be fully implemented with only HTML and CSS)-->
+			<nav id="navbar">
+				<div id="logo">
+					<a href="final.html"><img src="Resturant-Logo.jpg" alt="Ethan's Everything Restaurant Logo"></a>
+				</div>
+				<div id="nav-links">
+					<a href="final.html">HOME</a>
+					<a href="menu.html">MENU</a>
+					<a href="catering.html">CATERING</a>
+					<a href="about us.html">ABOUT US</a>
+				</div>
+				<div id="nav-side">
+					<a href="tel:+1234567890"> (123) 456-7890</a>
+					<a href="login.html">ACCOUNT</a>
+					<a href="checkout.html"><img src="shopping-cart.jpg" alt="Shopping Cart"></a>
+				</div>
+			</nav>
+			<header>
+				<h1>Ethan's Everything Restaurant</h1>
+			</header>
+			<main>
+				<img src="resturant exterior.jpg" alt="Restaurant Exterior" class="responsive">
+				<p style="font-size: 2em; font-family: Lucida Handwriting;text-align: center;">Welcome to Ethan's Everything Restaurant! Take a look at what we have to offer below and then head over to our <a href="menu.html">menu</a> page!</p>
+			</main>
+			<!-- displays the main categories of our menu using classes so the CSS has an easier time orienting everything correctyl-->
+			<section id="menu-highlights">
+				<h2>Menu Highlights</h2>
+				<div class="menu-items">
+					<div class="menu-category">
+						<a href="menu.html">
+						<img src="appetizers.jpg" alt="Appetizers">
+						<h3>Appetizers</h3>
+						</a>
+					</div>
+
+					<div class="menu-category">
+						<a href="menu.html">
+						<img src="desserts.jpg" alt="Desserts">
+						<h3>Desserts</h3>
+						</a>
+					</div>
+
+					<div class="menu-category">
+						<a href="menu.html">    
+						<img src="beverages.jpg" alt="American Style Meals">
+						<h3>Beverages</h3>
+					</a>
+					</div>
+
+					<div class="menu-category">
+						<a href="menu.html">    
+						<img src="americanfood.jpg" alt="American Style Meals">
+						<h3>American Foods</h3>
+					</a>
+					</div>
+
+					<div class="menu-category">
+						<a href="menu.html">    
+						<img src="asianfood.jpg" alt="Asian Style Meals">
+						<h3>Asian Foods</h3>
+					</a>
+					</div>
+
+					<div class="menu-category">
+						<a href="menu.html">    
+						<img src="italianfood.jpg" alt="Italian Style Meals">
+						<h3>Italian Foods</h3>
+					</a>
+					</div>
+
+					<div class="menu-category">
+						<a href="menu.html">    
+						<img src="mexicanfood.jpg" alt="Mexican Style Meals">
+						<h3>Mexican Foods</h3>
+					</a>
+					</div>
+
+					<div class="menu-category">
+						<a href="menu.html">    
+						<img src="indianfood.jpg" alt="Indian Style Meals">
+						<h3>Indian Foods</h3>
+					</a>
+					</div>
+
+					<div class="menu-category">
+						<a href="menu.html">    
+						<img src="hawaiianfood.jpg" alt="Hawaiian Style Meals">
+						<h3>Hawaiian Foods</h3>
+					</a>
+				</div>
+			</section>
+			<!--footer with contact info, appears on every page-->
+			<footer>
+				<p>Contact us: 123-456-7890 or at</p>
+				<p><a href="mailto:eezahner2@mail.fhsu.edu">eezahner2@mail.fhsu.edu</a></p>
+			</footer>
+		</div>
+	</body>
+</html>
